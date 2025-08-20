@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl">
           <h1 className="hero-text mb-6 animate-fade-in-up">
-            Soluções em Software —
+            Finderbit —
             <br />
             <span className="text-foreground animate-fade-in-up" style={{animationDelay: '0.3s'}}>Bit a bit, solução por solução</span>
           </h1>
@@ -46,19 +46,51 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Enhanced floating orb animation */}
-      <div className="absolute top-1/2 right-10 w-64 h-64 opacity-30 animate-float">
-        <div className="w-full h-full rounded-full border-2 border-primary animate-rotate-slow">
-          <div className="w-16 h-16 bg-primary rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 glow-effect animate-pulse-glow"></div>
-          <div className="w-8 h-8 bg-primary/50 rounded-full absolute top-1/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 animate-bounce-gentle"></div>
-          <div className="w-6 h-6 bg-primary/30 rounded-full absolute bottom-1/4 right-1/4 transform translate-x-1/2 translate-y-1/2 animate-float" style={{animationDelay: '1s'}}></div>
+      {/* Sistema orbital planetário */}
+      <div className="absolute top-1/2 right-10 w-80 h-80 opacity-40">
+        {/* Órbita principal (Sol central) */}
+        <div className="absolute top-1/2 left-1/2 w-6 h-6 bg-gradient-primary rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-pulse-glow"></div>
+        
+        {/* Primeira órbita */}
+        <div className="absolute top-1/2 left-1/2 w-60 h-60 border border-primary/20 rounded-full transform -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute top-0 left-1/2 w-4 h-4 bg-primary/70 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-orbit-planet-1">
+            <div className="w-full h-full rounded-full animate-pulse-glow"></div>
+          </div>
+        </div>
+        
+        {/* Segunda órbita */}
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 border border-primary/15 rounded-full transform -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute top-0 left-1/2 w-5 h-5 bg-primary/50 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-orbit-planet-2">
+            <div className="w-full h-full rounded-full animate-float"></div>
+          </div>
+        </div>
+        
+        {/* Terceira órbita */}
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 border border-primary/10 rounded-full transform -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute top-0 left-1/2 w-3 h-3 bg-primary/30 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-orbit-planet-3">
+            <div className="w-full h-full rounded-full animate-bounce-gentle"></div>
+          </div>
         </div>
       </div>
       
-      {/* Additional floating elements */}
-      <div className="absolute top-1/4 left-10 w-4 h-4 bg-primary/40 rounded-full animate-bounce-gentle" style={{animationDelay: '0.5s'}}></div>
-      <div className="absolute bottom-1/3 left-20 w-6 h-6 bg-primary/30 rounded-full animate-float" style={{animationDelay: '1.5s'}}></div>
-      <div className="absolute top-2/3 right-1/4 w-3 h-3 bg-primary/50 rounded-full animate-bounce-gentle" style={{animationDelay: '2s'}}></div>
+      {/* Elementos orbitais menores espalhados */}
+      <div className="absolute top-1/4 left-10 w-16 h-16 opacity-30">
+        <div className="w-full h-full border border-primary/20 rounded-full animate-rotate-slow">
+          <div className="absolute top-0 left-1/2 w-2 h-2 bg-primary/40 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-orbit-planet-1"></div>
+        </div>
+      </div>
+      
+      <div className="absolute bottom-1/3 left-20 w-20 h-20 opacity-25">
+        <div className="w-full h-full border border-primary/15 rounded-full animate-rotate-slow" style={{animationDuration: '40s'}}>
+          <div className="absolute top-0 left-1/2 w-3 h-3 bg-primary/30 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-orbit-planet-2"></div>
+        </div>
+      </div>
+      
+      <div className="absolute top-2/3 right-1/4 w-12 h-12 opacity-35">
+        <div className="w-full h-full border border-primary/25 rounded-full animate-rotate-slow" style={{animationDuration: '20s'}}>
+          <div className="absolute top-0 left-1/2 w-2 h-2 bg-primary/50 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-orbit-planet-3"></div>
+        </div>
+      </div>
     </section>
   );
 };

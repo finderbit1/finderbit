@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -101,6 +100,55 @@ export default {
 						height: '0'
 					}
 				},
+				'orbit-planet-1': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(120px) rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(120px) rotate(-360deg)'
+					}
+				},
+				'orbit-planet-2': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(200px) rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(200px) rotate(-360deg)'
+					}
+				},
+				'orbit-planet-3': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(300px) rotate(0deg)'
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(300px) rotate(-360deg)'
+					}
+				},
+				'bitcoin-journey': {
+					'0%': {
+						transform: 'translateX(-100px) translateY(0px) rotate(0deg)',
+						opacity: '0'
+					},
+					'10%': {
+						opacity: '1'
+					},
+					'25%': {
+						transform: 'translateX(25vw) translateY(-50px) rotate(90deg)'
+					},
+					'50%': {
+						transform: 'translateX(50vw) translateY(50px) rotate(180deg)'
+					},
+					'75%': {
+						transform: 'translateX(75vw) translateY(-30px) rotate(270deg)'
+					},
+					'90%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateX(calc(100vw + 100px)) translateY(0px) rotate(360deg)',
+						opacity: '0'
+					}
+				},
 				'fade-in': {
 					'0%': {
 						opacity: '0',
@@ -197,6 +245,10 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
+				'orbit-planet-1': 'orbit-planet-1 15s linear infinite',
+				'orbit-planet-2': 'orbit-planet-2 25s linear infinite',
+				'orbit-planet-3': 'orbit-planet-3 35s linear infinite',
+				'bitcoin-journey': 'bitcoin-journey 20s linear infinite',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'fade-in-left': 'fade-in-left 0.6s ease-out',
