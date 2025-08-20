@@ -126,28 +126,94 @@ export default {
 				},
 				'bitcoin-journey': {
 					'0%': {
-						transform: 'translateX(-100px) translateY(0px) rotate(0deg)',
+						transform: 'translateX(-100px) translateY(20vh) rotate(0deg) scale(1)',
 						opacity: '0'
 					},
-					'10%': {
+					'5%': {
 						opacity: '1'
 					},
+					'15%': {
+						transform: 'translateX(15vw) translateY(10vh) rotate(45deg) scale(1.2)'
+					},
 					'25%': {
-						transform: 'translateX(25vw) translateY(-50px) rotate(90deg)'
+						transform: 'translateX(30vw) translateY(30vh) rotate(90deg) scale(0.8)'
+					},
+					'35%': {
+						transform: 'translateX(45vw) translateY(60vh) rotate(135deg) scale(1.1)'
 					},
 					'50%': {
-						transform: 'translateX(50vw) translateY(50px) rotate(180deg)'
+						transform: 'translateX(60vw) translateY(40vh) rotate(180deg) scale(0.9)'
+					},
+					'65%': {
+						transform: 'translateX(75vw) translateY(70vh) rotate(225deg) scale(1.3)'
 					},
 					'75%': {
-						transform: 'translateX(75vw) translateY(-30px) rotate(270deg)'
+						transform: 'translateX(85vw) translateY(25vh) rotate(270deg) scale(1.0)'
 					},
-					'90%': {
+					'85%': {
+						transform: 'translateX(90vw) translateY(50vh) rotate(315deg) scale(1.1)'
+					},
+					'95%': {
 						opacity: '1'
 					},
 					'100%': {
-						transform: 'translateX(calc(100vw + 100px)) translateY(0px) rotate(360deg)',
+						transform: 'translateX(calc(100vw + 100px)) translateY(80vh) rotate(360deg) scale(0.8)',
 						opacity: '0'
 					}
+				},
+				'rocket-chase': {
+					'0%': {
+						transform: 'translateX(-150px) translateY(25vh) rotate(-15deg) scale(0.8)',
+						opacity: '0'
+					},
+					'8%': {
+						opacity: '1'
+					},
+					'18%': {
+						transform: 'translateX(12vw) translateY(15vh) rotate(30deg) scale(1.0)'
+					},
+					'28%': {
+						transform: 'translateX(27vw) translateY(35vh) rotate(75deg) scale(0.9)'
+					},
+					'38%': {
+						transform: 'translateX(42vw) translateY(65vh) rotate(120deg) scale(1.1)'
+					},
+					'53%': {
+						transform: 'translateX(57vw) translateY(45vh) rotate(165deg) scale(0.95)'
+					},
+					'68%': {
+						transform: 'translateX(72vw) translateY(75vh) rotate(210deg) scale(1.2)'
+					},
+					'78%': {
+						transform: 'translateX(82vw) translateY(30vh) rotate(255deg) scale(1.05)'
+					},
+					'88%': {
+						transform: 'translateX(87vw) translateY(55vh) rotate(300deg) scale(1.15)'
+					},
+					'98%': {
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateX(calc(100vw + 150px)) translateY(85vh) rotate(345deg) scale(0.9)',
+						opacity: '0'
+					}
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				},
+				'glow-pulse': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(180 100% 60% / 0.4), 0 0 40px hsl(180 100% 60% / 0.2)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px hsl(180 100% 60% / 0.8), 0 0 80px hsl(180 100% 60% / 0.4)'
+					}
+				},
+				'levitate': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'33%': { transform: 'translateY(-15px) rotate(5deg)' },
+					'66%': { transform: 'translateY(-8px) rotate(-3deg)' }
 				},
 				'fade-in': {
 					'0%': {
@@ -248,7 +314,11 @@ export default {
 				'orbit-planet-1': 'orbit-planet-1 15s linear infinite',
 				'orbit-planet-2': 'orbit-planet-2 25s linear infinite',
 				'orbit-planet-3': 'orbit-planet-3 35s linear infinite',
-				'bitcoin-journey': 'bitcoin-journey 20s linear infinite',
+				'bitcoin-journey': 'bitcoin-journey 25s ease-in-out infinite',
+				'rocket-chase': 'rocket-chase 25s ease-in-out infinite 2s',
+				'wiggle': 'wiggle 1s ease-in-out infinite',
+				'glow-pulse': 'glow-pulse 3s ease-in-out infinite',
+				'levitate': 'levitate 4s ease-in-out infinite',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'fade-in-left': 'fade-in-left 0.6s ease-out',
